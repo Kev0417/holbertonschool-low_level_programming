@@ -23,7 +23,7 @@ while (n1 <= '7')
 				n3++;
 				continue;
 				}
-			if (n1 > n2 || n1 > n3)
+			if (n1 > n2 || n2 > n3 || n1 > n3)
 				{
 				n3++;
 				continue;
