@@ -1,54 +1,29 @@
 #include <stdio.h>
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
- */
+  * main - entry block
+  *
+  * Return: 0
+  **/
 int main(void)
 {
-int n1, n2, n3, n4;
-n1 = '0';
-n2 = '0';
-n3 = '0';
-n4 = '0';
-while (n1 <= '9')
+	int n1, n2;
+
+	for (n1 = 0; n1 < 100; n1++)
 	{
-	while (n2 <= '9')
+		for (n2 = n1 + 1; n2 < 100; n2++)
 		{
-		while (n3 <= '9')
+			putchar(n1 / 10 + '0');
+			putchar(n1 % 10 + '0');
+			putchar(' ');
+			putchar(n2 / 10 + '0');
+			putchar(n2 % 10 + '0');
+			if (n1 != 98 || n2 != 99)
 			{
-			while (n4 <= '9')
-				{
-					if (n1 > n3 || n2 > n4)
-						{
-							n4++;
-							continue;
-						}
-					if (n1 == n3 && n2 == n4)
-						{
-							n4++;
-							continue;
-						}
-					putchar(n1);
-					putchar(n2);
-					putchar(' ');
-					putchar(n3);
-					putchar(n4);
-					if (n1 == '9' && n2 == '8' && n3 == '9' && n4 == '9')
-						break;
-					putchar(',');
-					putchar(' ');
-					n4++;
-				}
-				n4 = '0';
-				n3++;
+				putchar(',');
+				putchar(' ');
 			}
-			n3 = '0';
-			n2++;
 		}
-	n2 = '0';
-	n1++;
 	}
-putchar('\n');
-return (0);
+	putchar('\n');
+	return (0);
 }
