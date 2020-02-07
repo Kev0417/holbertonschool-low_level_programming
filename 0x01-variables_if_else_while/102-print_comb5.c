@@ -34,6 +34,8 @@ while (n1 <= '9')
 					putchar(' ');
 					putchar(n3);
 					putchar(n4);
+					if (n1 == '9' && n2 == '8' && n3 == '9' && n4 == '9')
+						break;
 					putchar(',');
 					putchar(' ');
 					n4++;
