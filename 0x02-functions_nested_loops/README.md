@@ -1,0 +1,1 @@
+This is a readme file for the holbertonschool project 0x02 Funtioncs nested loops
