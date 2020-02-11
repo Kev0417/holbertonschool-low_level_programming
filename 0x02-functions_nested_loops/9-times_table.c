@@ -20,6 +20,10 @@ void times_table(void)
 			}
 			else
 			{
+				if (b !=0)
+				{
+					_putchar(' ');
+				}
 				_putchar(b * a + '0');
 			}
 			if (b != 9)
@@ -31,3 +35,4 @@ void times_table(void)
 		_putchar('\n');
 	}
 }
+
