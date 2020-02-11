@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * main - Entry point
+ * jack_bauer - Entry point
  *
  * Return:  Always 0 (Success)
  */
@@ -18,6 +18,7 @@ void jack_bauer(void)
 			_putchar(':');
 			_putchar(y / 10 + '0');
 			_putchar(y % 10 + '0');
+
 			_putchar('\n');
 		}
 	}
