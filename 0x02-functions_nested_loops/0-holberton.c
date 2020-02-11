@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	char a[] = "holberton";
+	char a[] = "Holberton";
 	int b;
 
 	b = 0;
@@ -16,7 +16,7 @@ int main(void)
 		_putchar(a[b]);
 		b++;
 	}
-	putchar('\n');
+	_putchar('\n');
 	return (0);
 }
 
