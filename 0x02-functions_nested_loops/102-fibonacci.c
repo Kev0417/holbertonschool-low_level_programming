@@ -28,6 +28,5 @@ int main(void)
 		b1 = c;
 		a++;
 	}
-
 	return (0);
 }
