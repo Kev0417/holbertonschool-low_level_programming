@@ -8,7 +8,9 @@ void print_times_table(int n)
 {
 	int a, b; /* size / multp */
 
-	if (n != 98)
+	if (n > 15 || n < 0)
+		return(n);
+	else
 	{
 		for (a = 0; a <= n; a++)
 		{
@@ -44,8 +46,5 @@ void print_times_table(int n)
 			_putchar('\n');
 		}
 	}
-	else
-		return;
-
 }
 
