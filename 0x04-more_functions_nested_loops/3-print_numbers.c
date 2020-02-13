@@ -2,9 +2,9 @@
 #include "holberton.h"
 
 /**
- * _isupper - check for upper case letters..
- * @c : char to check
- * Return: Always 1 if upper.
+ * print_numbers - print numbers from 0 to 9..
+ *
+ * Return:
  */
 
 void print_numbers(void)
