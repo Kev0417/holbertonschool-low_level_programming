@@ -2,8 +2,9 @@
 
 /**
  * mul - check for upper case letters..
- * @c : char to check
- * Return: Always 1 if upper.
+ * @a : char to check
+ * @b : char to check
+ * Return: a * b.
  */
 
 int mul(int a, int b)
