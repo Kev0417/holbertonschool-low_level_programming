@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "holberton.h"
 /**
  * print_number - print an integer.
@@ -37,7 +36,7 @@ void print_number(int n)
 		else
 		{
 			_putchar((a / b % 10) + '0');
-			b /= 10;
+			b = b / 10;
 		}
 	}
 }
