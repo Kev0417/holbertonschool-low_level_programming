@@ -1,0 +1,1 @@
+This is the directory for the project 0x06 pointers, arrays and strings
