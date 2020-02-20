@@ -1,9 +1,10 @@
 #include "holberton.h"
 
 /**
- * *_strcat - print a string in reverse
- * @*dest: char to check
- * @*src: char to check
+ * _strcat - concatenate two strings
+ * @dest: char string to concatenate to
+ * @src: char string
+ * Return: 'dest'
  */
 
 char *_strcat(char *dest, char *src)
@@ -23,3 +24,4 @@ char *_strcat(char *dest, char *src)
 
 	return (dest);
 }
+
