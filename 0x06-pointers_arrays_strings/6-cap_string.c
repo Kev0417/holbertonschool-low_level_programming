@@ -6,25 +6,35 @@
  * Return: `s`
  */
 
-char *cap_string(char *s)
+char *cap_string(char *str)
 {
-	int a, b;
-	char x[];
+	int i, c;
+	int trigger;
+	char nots[] = ",;.!?(){}\n\t\" ";
 
-	x[] = {',', '.', ';', '!', '?', '"', '(', ')', '{', '}', ' ', '\t', '\n'};
-	for (a = 0; s[a] != 0; a++)
+	for (i = 0, trigger = 0; str[i] != '\0'; i++)
 	{
-		for (b = 0; x[b] != 0; b++)
+		if (str[0] > 96 && str[0] < 123)
+			trigger = 1;
+		for (c = 0; nots[c] != '\0'; c++)
 		{
-			if (s[a] == x[b])
+			if (nots[c] == str[i])
+				trigger = 1;
+		}
+
+		if (trigger)
+		{
+			if (str[i] > 96 && str[i] < 123)
 			{
-				a++;
-				if (s[a] > 96 && s[a] < 123)
-					s[a] -= 32;
+				str[i] -= 32;
+				trigger = 0;
 			}
+			else if (str[i] > 64 && str[i] < 91)
+				trigger = 0;
+			else if (str[i] > 47 && str[i] < 58)
+				trigger = 0;
 		}
 	}
-
-	return (s);
+	return (str);
 }
 
