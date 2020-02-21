@@ -23,6 +23,6 @@ char *leet(char *s)
 		while (s[a] == 'l' || s[a] == 'L')
 			s[a] = '1';
 	}
-
 	return (s);
 }
+
