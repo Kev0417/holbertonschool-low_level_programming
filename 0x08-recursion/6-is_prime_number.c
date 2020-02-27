@@ -12,7 +12,7 @@ int is_prime_number(int n)
 }
 
 /**
- * magic - determine if a number is a prime number
+ * _magic - determine if a number is a prime number
  * @x: int number
  * @n: int number
  * Return: 1 if prime, 0 otherwise
