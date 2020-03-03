@@ -14,7 +14,7 @@ char *str_concat(char *s1, char *s2)
 	int i, j, x, z;
 
 	if (s1 == NULL && s2 == NULL)
-		return (NULL);
+		return (a);
 
 	i = 0;
 	j = 0;
@@ -25,7 +25,7 @@ char *str_concat(char *s1, char *s2)
 
 	a = malloc(i + j * sizeof(char) + 1);
 	if (a == NULL)
-		return (a);
+		return (NULL);
 
 	for (x = 0; x < i; x++)
 		a[x] = s1[x];
