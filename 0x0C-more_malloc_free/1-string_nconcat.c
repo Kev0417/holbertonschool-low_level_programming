@@ -28,13 +28,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		n = y;
 	a = malloc(x + n + 1);
 	if (a == 0)
-		return(NULL);
+		return (NULL);
 	z = n;
 	for (i = 0; i < x; i++)
 		a[i] = s1[i];
 	for (j = 0; i < x + z; j++, i++)
 		a[i] = s2[j];
 	a[i] = '\0';
-	return(a);
+	return (a);
 }
 
