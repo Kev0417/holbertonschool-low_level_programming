@@ -49,33 +49,32 @@ void print_float(va_list list)
  */
 void print_all(const char * const format, ...)
 {
-	int i = 0, j = 0;
-	char *separator = "";
+	unsigned int i, j;
+	va_list args;
+	char *sep;
 
-	va_list list;
-
-	data data[] = {
-		{"c", print_char},
-		{"i", print_int},
-		{"f", print_float},
-		{"s", print_str}
+	data storage[] = {
+		{ "c", print_char },
+		{ "f", print_float },
+		{ "s", print_str },
+		{ "i", print_int }
 	};
-	va_start(list, format);
 
-	while (format != NULL && *(format + j) != '\0')
+	i = 0;
+	sep = "";
+	va_start(args, format);
+	while (format != NULL && format[i / 4] != '\0')
 	{
-		while (i < 4)
+		j = i % 4;
+		if (storage[j].type[0] == format[i / 4])
 		{
-			if (data[i].type[0] == format[j])
-			{
-				data[i].f(list, separator);
-				separator = ", ";
-			}
-			i++;
+			printf("%s", sep);
+			storage[j].f(args);
+			sep = ", ";
 		}
-		j++, i = 0;
+		i++;
 	}
-	va_end(list);
 	printf("\n");
+	va_end(args);
 }
 
