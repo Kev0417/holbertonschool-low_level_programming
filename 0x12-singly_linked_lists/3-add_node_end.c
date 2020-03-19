@@ -13,6 +13,9 @@ list_t *add_node_end(list_t **head, const char *str)
 	list_t *samuel;
 	int a;
 
+	if (*head == NULL)
+		return (0);
+
 	samuel = *head;
 	while (samuel && samuel->next != NULL)
 		samuel = samuel->next;
