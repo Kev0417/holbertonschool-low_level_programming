@@ -31,8 +31,8 @@ int main(int ac, char *av[])
 	if (ctrl_v == -1)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
 
-	close (f_from);
-	close (f_to);
+	close(ctrl_c);
+	close(ctrl_v);
 	return (0);
 }
 
