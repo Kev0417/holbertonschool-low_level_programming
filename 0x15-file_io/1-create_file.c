@@ -12,7 +12,7 @@ int create_file(const char *filename, char *text_content)
 	mode_t mode = S_IRUSR | S_IWUSR | O_WRONLY | O_CREAT | O_TRUNC;
 	ssize_t w_file;
 
-	if (filename == NULL)
+	if (filename == NULL || text_content)
 		return (0);
 
 	fd = open(filename, mode);
