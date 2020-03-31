@@ -9,13 +9,14 @@
 int create_file(const char *filename, char *text_content)
 {
 	int fd, i;
-	mode_t mode = S_IRUSR | S_IWUSR | O_WRONLY | O_CREAT | O_TRUNC;
+	mode_t mode = O_CREAT | O_WRONLY | O_TRUNC;
+	mode_t chmod = S_IRUSR | S_IWUSR;
 	ssize_t w_file;
 
-	if (filename == NULL || text_content)
+	if (filename == NULL)
 		return (0);
 
-	fd = open(filename, mode);
+	fd = open(filename, mode, chmod);
 	if (fd == -1)
 		return (-1);
 
